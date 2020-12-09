@@ -9,7 +9,7 @@ check_width()
 
 
 def select_main_menu():
-    menu = 0
+    menu = -1
     try:
         menu = int(input("- Pilih Menu   : "))
 
@@ -38,8 +38,10 @@ def select_main_menu():
             main_menu()
     except:
         if (menu != 0):
-            msg_waring("\n\nWarning : Maaf Menu yang anda input Tidak Ada !\n")
-            msg_keluar()
+            msg_waring(
+                "\n\nWarning : Maaf Menu yang anda input Tidak Ada, jangan maen-maen !\n"
+            )
+            sleep(5)
 
 
 def generate_data_trx():
